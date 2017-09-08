@@ -29,12 +29,12 @@ This paper presents a fully automatic technique for handling unconstrained video
   ![](https://github.com/sun521521/VideoSegmentation/blob/master/test/bottom-right.png)
 我们的度量在不会提升异类超像素块一致性的前提下（绿色），可以显著提升同类的超像素块的一致性（红色）
 
-3.一般来说，具有相似运动方向的区域，我们会认为他们是来自容一个物体，这符合人眼的认知机制，求出每个像素点的运动速度方向（颜色相近，表明物体运动方向近似）：
+3.一般来说，具有相似运动方向的区域，我们会认为他们是来自同一个物体，这符合人眼的认知机制，求出每个像素点的运动速度方向（颜色相近，表明物体运动方向近似）：
 ![](https://github.com/sun521521/VideoSegmentation/blob/master/test/figure41.png)
-可以看出，运动的滑翔艇具有相似地速度。我们设计了一个刻画运动方向的一致性度量，实验表明它可以区分来自同类和异类的超像素块：
+可以看出，运动的滑翔伞具有相似的速度。我们设计了一个针对运动方向的一致性度量，实验表明它可以很好地区分来自同类和异类的超像素块：
 ![](https://github.com/sun521521/VideoSegmentation/blob/master/test/figure42.png)
 
 ### 总结
-我们在两个数据集davis 和segTrack v2上做了大量实验，分割准确度已经超过了很多优秀算法
+我们在两个流行的数据集davis 和segTrack v2上做了大量实验，分割准确度已经超过了很多优秀算法：
 ![](https://github.com/sun521521/VideoSegmentation/blob/master/test/figure7.png)
 
