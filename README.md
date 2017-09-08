@@ -37,4 +37,5 @@ This paper presents a fully automatic technique for handling unconstrained video
 ### 总结
 我们在两个流行的数据集davis 和segTrack v2上做了大量实验，分割准确度已经超过了很多优秀算法：
 ![](https://github.com/sun521521/VideoSegmentation/blob/master/test/figure7.png)
+![](https://github.com/sun521521/VideoSegmentation/blob/master/test/figure6.png)
 
