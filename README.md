@@ -11,3 +11,10 @@ This paper presents a fully automatic technique for handling unconstrained video
 [2]	W. Wang, J. Shen, and F. Porikli, "Saliency-aware geodesic video object segmentation." pp. 3395-3402.
 
 [3]	J. Chang, D. Wei, and J. W. F. Iii, “A video representation using temporal superpixels,” in IEEE Conference on Computer Vision and Pattern Recognition, 2013, pp. 2051-2058.
+
+
+## 算法介绍
+整体来说，我们提出了一个coarse-to-fine视频分割框架，它是建立在基于MRF的grabCut分割框架上的。关键地，这个算法需要构建有效的一元和二元势能。我们提出了增强目标连通性的一元势能，利用了随机游走模型，想法是：视频中的前景目标在整个视频中通过某些特征线索都是连通的（除非遮挡或者消失）。另外，还构建了利用外观模型和位置模型交互信息的一元势能。  对于二元势能，我们利用超边，并量化了人眼视觉原则“proximity”,增强了目标内的一致性。算法如下：
+![][https://github.com/sun521521/VideoSegmentation/test/VideoSegmentation/test/figure1.png]
+
+
