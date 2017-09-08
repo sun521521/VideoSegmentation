@@ -24,10 +24,10 @@ This paper presents a fully automatic technique for handling unconstrained video
 在此基础上，考虑到物体可能会在某些帧静止，那么基于运动特征建模的方法就会失效。避免失误，我们利用了光流的繁衍模型，即使静止，目标也会被检测到。例如，作为支撑的右腿，如果没有用繁衍模型，那么检测效果很差（middle），但是经过繁衍模型修正后，效果变优（right）.
 ![](https://github.com/sun521521/VideoSegmentation/blob/master/test/figure5.png)
 
-2. 另外一个创新是利用超边，设计了一个增强目标在时空域内一致性的二元度量。并量化了人眼视觉原则“proximity”。效果如下：
-![](https://github.com/sun521521/VideoSegmentation/blob/master/test/bottom-left.png)
-![](https://github.com/sun521521/VideoSegmentation/blob/master/test/bottom-right.png)
-我们的度量在没有明显提升异类超像素块一致性的前提下（绿色），可以提升同类的超像素块的一致性（红色）
+2. 另外一个创新是利用超边结构，设计了一个增强目标在时空域内一致性的二元度量。并量化了人眼视觉原则“proximity”。效果如下：
+  ![](https://github.com/sun521521/VideoSegmentation/blob/master/test/bottom-left.png)
+  ![](https://github.com/sun521521/VideoSegmentation/blob/master/test/bottom-right.png)
+我们的度量在不会提升异类超像素块一致性的前提下（绿色），可以显著提升同类的超像素块的一致性（红色）
 
 3.一般来说，具有相似运动方向的区域，我们会认为他们是来自容一个物体，这符合人眼的认知机制，求出每个像素点的运动速度方向（颜色相近，表明物体运动方向近似）：
 ![](https://github.com/sun521521/VideoSegmentation/blob/master/test/figure41.png)
