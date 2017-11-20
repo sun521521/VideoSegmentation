@@ -26,8 +26,8 @@ This paper presents a fully automatic technique for handling unconstrained video
 
 2. 另外一个创新是利用超边结构，设计了一个增强目标在时空域内一致性的二元度量。并量化了人眼视觉原则“proximity”。效果如下：
   ![](https://github.com/sun521521/VideoSegmentation/blob/master/test/bottom-left.png)
-  ![](https://github.com/sun521521/VideoSegmentation/blob/master/test/bottom-right.png)
-我们的度量在不会提升异类超像素块一致性的前提下（绿色），可以显著提升同类的超像素块的一致性（红色）
+  ![](https://github.com/sun521521/VideoSegmentation/blob/master/test/bottom-right.png)<br>
+  我们的度量在不会提升异类超像素块一致性的前提下（绿色），可以显著提升同类的超像素块的一致性（红色）
 
 3.一般来说，具有相似运动方向的区域，我们会认为他们是来自同一个物体，这符合人眼的认知机制，求出每个像素点的运动速度方向（颜色相近，表明物体运动方向近似）：
 ![](https://github.com/sun521521/VideoSegmentation/blob/master/test/figure41.png)
